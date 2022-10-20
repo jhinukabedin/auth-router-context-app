@@ -5,7 +5,6 @@ import { AuthContext } from '../contexts/UserContext';
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
-    console.log("createUser", createUser);
 
     const handleSubmit = event => {
         event.preventDefault(AuthContext);
@@ -13,11 +12,15 @@ const Register = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+
         createUser(email, password)
         .then(result =>{
             const user = result.user;
-            console.log(user);
+            form.reset();
+            console.log('registered', user);
+        })
+        .catch( error =>{
+            console.error(error)
         })
     }
     return (
