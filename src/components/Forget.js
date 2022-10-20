@@ -23,7 +23,7 @@ const Forget = () => {
                                     </label>
                                     <input type="email" placeholder="email" name="email" className="input input-bordered" required />
                                     <label className="label">
-                                        <Link to="/login" className="label-text-alt link link-hover">Already have an account?</Link>
+                                        <Link to="/register" className="label-text-alt link link-hover">New user! Please Signup</Link>
                                     </label>
                                 </div>
 
